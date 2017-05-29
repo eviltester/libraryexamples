@@ -27,7 +27,7 @@ public class HamcrestAssertionOnSwapiDataUsageTest {
         int mass = json.getInt("mass");
 
         // using C-3PO data
-        assertThat(name , is(equalTo("C-3PO")));
+        assertThat(name, is(equalTo("C-3PO")));
         assertThat(name, is(not(equalTo("R2-D2"))));
         assertThat(mass, is(greaterThan(74)));
         
