@@ -32,6 +32,40 @@ public class GsonParsingSwapiApiData {
         //Assert.assertTrue(mass > 74);
         Assert.assertTrue("expected " + mass + " to be greater than 74",
                 mass > 74);
+    }
+
+    private class Person{
+
+        public String name;
+        public int mass;
+    }
+    
+    @Test
+    public void canParseWithGSonAndObject(){
+
+        // generic parsing with Gson
+        Gson gson = new Gson();
+        Person c3po = gson.fromJson(swapidata, Person.class);
+
+        String name = c3po.name;
+        int mass = c3po.mass;
+
+        // using C-3PO data
+        Assert.assertEquals("C-3PO", name);
+        Assert.assertNotEquals("R2-D2", name);
+        //Assert.assertTrue(mass > 74);
+        Assert.assertTrue("expected " + mass + " to be greater than 74",
+                mass > 74);
 
     }
+
+    /* Exercises:
+
+        You can easily view the JSON used by visiting the Swapi.co site
+            http://swapi.co/api/people/2/?format=api
+
+        - Create a Person object that represents all the attributes of the Swapi.co format
+        - and parse the string using GSON fromJson in the Person object 
+        
+     */
 }

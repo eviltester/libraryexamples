@@ -144,12 +144,20 @@ public class SwapiGUIFormUsageTest {
 
     }
 
-        /* Exercise search for C-3PO instead of Luke Skywalker:
+    /* Exercise search for C-3PO instead of Luke Skywalker:
          Download ChromeDriver from  https://sites.google.com/a/chromium.org/chromedriver/
          And add the chromedriver executable to your path
          comment out the usage of HtmlUnitDriver and enable use of ChromeDriver
          click on the second link (1)
          Assert on the name "Yavin IV"
+     */
+
+    /* for a real 'hack'
+
+       create a SwapiApi implementation that uses WebDriver and parses the Json from the GUI
+
+       - ugh it is horrible but you will learn how to parse Strings
+       - and there will a come a time when you have to automate like this
      */
 
 }

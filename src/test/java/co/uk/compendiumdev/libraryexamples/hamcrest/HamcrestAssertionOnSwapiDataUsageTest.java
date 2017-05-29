@@ -33,5 +33,17 @@ public class HamcrestAssertionOnSwapiDataUsageTest {
         
     }
 
+    
+    /*
+
+        You can easily view the JSON used by visiting the Swapi.co site
+            http://swapi.co/api/people/2/?format=api
+
+        Exercise:
+           - Use Json path to extract more values from JSON
+           - Experiment with Hamcrest matchers to assert on the values from Json
+           - Expand Json Path to extract to an object and assert on object fields or 'get' methods
+               - see `SwapoAPIUsageTest`
+     */
 
 }

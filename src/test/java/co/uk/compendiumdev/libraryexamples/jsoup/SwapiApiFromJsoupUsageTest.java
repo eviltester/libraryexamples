@@ -37,10 +37,12 @@ public class SwapiApiFromJsoupUsageTest {
     }
 
 
-    /* API Exercises
+    /* JSOUP API Exercises
 
          - make sure your URL call is always upto date by getting the url from the root api
              - make a call to http://swapi.co/api/?format=json and use the url for people in the returned array
+
+         - automate more of the Swapi API e.g. planets etc.
 
          - Create an abstraction layer for the Swapi
          - e.g.
@@ -51,6 +53,8 @@ public class SwapiApiFromJsoupUsageTest {
          ~~~~~~~~
 
          - extend the abstraction layer to have a Person object which models the star wars person as an object
+            - see Gson example of RestAssured JsonPath example for how to do this
+            
          - e.g.
 
          ~~~~~~~~
