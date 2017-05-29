@@ -1,4 +1,4 @@
-package co.uk.compendiumdev.libraryexamples.hamcrest;
+package uk.co.compendiumdev.libraryexamples.hamcrest;
 
 import io.restassured.path.json.JsonPath;
 import org.junit.Test;

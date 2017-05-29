@@ -1,4 +1,4 @@
-package co.uk.compendiumdev.libraryexamples.restassured;
+package uk.co.compendiumdev.libraryexamples.restassured;
 
 
 import io.restassured.RestAssured;

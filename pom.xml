@@ -55,6 +55,34 @@
             <artifactId>gson</artifactId>
             <version>2.8.0</version>
         </dependency>
+
+
+        <!-- Cucumber
+
+        - https://cucumber.io/docs
+        - https://cucumber.io/docs/reference/jvm#java
+        - https://cucumber.io/docs/reference/jvm#running-cucumber
+
+        -->
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
         
     </dependencies>
 

@@ -1,4 +1,4 @@
-package co.uk.compendiumdev.libraryexamples.webdriver;
+package uk.co.compendiumdev.libraryexamples.webdriver;
 
 
 import com.gargoylesoftware.htmlunit.BrowserVersion;

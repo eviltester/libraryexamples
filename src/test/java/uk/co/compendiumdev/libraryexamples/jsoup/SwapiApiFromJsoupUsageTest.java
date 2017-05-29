@@ -1,4 +1,4 @@
-package co.uk.compendiumdev.libraryexamples.jsoup;
+package uk.co.compendiumdev.libraryexamples.jsoup;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

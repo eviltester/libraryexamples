@@ -1,4 +1,4 @@
-package co.uk.compendiumdev.libraryexamples.gson;
+package uk.co.compendiumdev.libraryexamples.gson;
 
 
 import com.google.gson.Gson;
