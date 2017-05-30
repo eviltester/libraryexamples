@@ -75,7 +75,6 @@ public class SwapiAPIUsageTest {
 
 
     private class Person{
-
         public String name;
         public int mass;
     }
