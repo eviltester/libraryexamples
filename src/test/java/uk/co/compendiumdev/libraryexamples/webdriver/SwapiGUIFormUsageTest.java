@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.List;
 
@@ -22,6 +23,9 @@ public class SwapiGUIFormUsageTest {
     public void canGetSwapiGUIPage(){
 
         WebDriver driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
+
+        // On mac SafariDriver is built in
+        //driver = new SafariDriver();
 
         driver.get("https://swapi.co/");
 
@@ -41,6 +45,8 @@ public class SwapiGUIFormUsageTest {
         // this does actually work on HtmlUnitDriver
         driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
         ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+
+        //driver = new SafariDriver();
 
         driver.get("http://swapi.co/api/people/1/?format=api");
 
@@ -63,6 +69,8 @@ public class SwapiGUIFormUsageTest {
         // this does actually work on HtmlUnitDriver
         driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
         ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+
+        //driver = new SafariDriver();
 
         driver.get("http://swapi.co/api/people/2/?format=api");
 
@@ -88,6 +96,7 @@ public class SwapiGUIFormUsageTest {
         driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
         ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
 
+        //driver = new SafariDriver();
         // driver = new ChromeDriver();
 
         driver.get("https://swapi.co/");
@@ -109,6 +118,11 @@ public class SwapiGUIFormUsageTest {
 
 
     /* Exercise search for C-3PO instead of Luke Skywalker:
+        If you are on Mac then you can uncomment out the SafariDriver lines and run the tests in Safari
+           - you don't need to download ChromeDriver - although you can if you want to
+
+        On windows you will need to download a Driver - currently recommend ChromeDriver
+
          Download ChromeDriver from  https://sites.google.com/a/chromium.org/chromedriver/
          And add the chromedriver executable to your path
          comment out the usage of HtmlUnitDriver and enable use of ChromeDriver
@@ -126,6 +140,7 @@ public class SwapiGUIFormUsageTest {
         driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
         ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
 
+        //driver = new SafariDriver();
         //driver = new ChromeDriver();
 
         driver.get("https://swapi.co/");
