@@ -6,12 +6,13 @@ Used in "Java For Testers" classroom training.
 
 Examples include:
 
-- WebDriver
-- Gson
-- RestAssured
-   - JsonPath
-- JSoup
-- Hamcrest
+- [WebDriver](http://www.seleniumhq.org/projects/webdriver/)
+- [Gson](https://github.com/google/gson)
+- [RestAssured](http://rest-assured.io/)
+    - JsonPath
+    - [on github](https://github.com/rest-assured/rest-assured)
+- [JSoup](https://jsoup.org/)
+- [Hamcrest](http://hamcrest.org/)
 
 Examples are using the [Swapi.co](https://swapi.co/) public API and JSON data from Swapi.co.
 
