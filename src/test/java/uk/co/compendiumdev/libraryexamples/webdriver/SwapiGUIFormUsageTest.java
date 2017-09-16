@@ -3,15 +3,19 @@ package uk.co.compendiumdev.libraryexamples.webdriver;
 
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+@Ignore("You need to amend for your setup and operating system to use this e.g. did you install a ChromeDriver? Are you on Mac for SafariDriver?")
 public class SwapiGUIFormUsageTest {
 
     /*
@@ -22,10 +26,12 @@ public class SwapiGUIFormUsageTest {
     @Test
     public void canGetSwapiGUIPage(){
 
-        WebDriver driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
+        //WebDriver driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
+
+        WebDriver driver = new ChromeDriver();
 
         // On mac SafariDriver is built in
-        //driver = new SafariDriver();
+        // driver = new SafariDriver();
 
         driver.get("https://swapi.co/");
 
@@ -47,6 +53,7 @@ public class SwapiGUIFormUsageTest {
         ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
 
         //driver = new SafariDriver();
+        driver = new ChromeDriver();
 
         driver.get("http://swapi.co/api/people/1/?format=api");
 
@@ -97,20 +104,25 @@ public class SwapiGUIFormUsageTest {
         ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
 
         //driver = new SafariDriver();
-        // driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
         driver.get("https://swapi.co/");
 
         WebElement inputfield = driver.findElement(By.id("interactive"));
 
-        inputfield.sendKeys("people/1/");
+        inputfield.sendKeys("people/2/");
 
         driver.findElement(By.className("btn-primary")).click();
+
+        new WebDriverWait(driver, 10).
+                until(
+                        ExpectedConditions.
+                                textToBePresentInElementLocated(By.id("interactive_output"), "C-3PO"));
 
         WebElement output = driver.findElement(By.id("interactive_output"));
         String json = output.getText();
 
-        Assert.assertTrue(json.contains("Luke Skywalker"));
+        Assert.assertTrue(json.contains("C-3PO"));
 
         driver.quit();
 
