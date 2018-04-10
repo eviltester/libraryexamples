@@ -19,8 +19,17 @@ import java.util.List;
 public class SwapiGUIFormUsageTest {
 
     /*
-        This exmaple uses WebDriver from http://www.seleniumhq.org/
+        This example uses WebDriver from http://www.seleniumhq.org/
         see also http://SeleniumSimplified.com
+
+        // mac:
+        // brew install chromedriver
+
+        // mac: to use SafariDriver remember to configure safari to allow remote execution - follow instructions in the error message if you have not
+
+        // windows:
+        // choco install chromedriver
+
      */
 
     @Test
@@ -31,7 +40,7 @@ public class SwapiGUIFormUsageTest {
         WebDriver driver = new ChromeDriver();
 
         // On mac SafariDriver is built in
-        // driver = new SafariDriver();
+        //WebDriver driver = new SafariDriver();
 
         driver.get("https://swapi.co/");
 
