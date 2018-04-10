@@ -27,7 +27,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>3.0.3</version>
+            <version>3.0.7</version>
         </dependency>
 
         <!-- JSOUP -->
@@ -85,5 +85,22 @@
         </dependency>
         
     </dependencies>
+
+    <!-- This basically says the source requires at least Java 1.7
+and use a compiler that outputs Java 1.7 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
