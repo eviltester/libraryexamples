@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -32,15 +33,33 @@ public class SwapiGUIFormUsageTest {
 
      */
 
+    private WebDriver getDefaultDriver(){
+
+        WebDriver driver;
+
+        // comment out the lines you want to get the driver you need
+
+        driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
+        ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+
+        //driver = new ChromeDriver();
+
+        //driver = new SafariDriver();
+
+        return driver;
+    }
+
     @Test
     public void canGetSwapiGUIPage(){
 
-        //WebDriver driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
+        WebDriver driver;
+        driver = getDefaultDriver();
 
-        WebDriver driver = new ChromeDriver();
+        //driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
+        //driver = new ChromeDriver();
 
         // On mac SafariDriver is built in
-        //WebDriver driver = new SafariDriver();
+        //driver = new SafariDriver();
 
         driver.get("https://swapi.co/");
 
@@ -57,12 +76,13 @@ public class SwapiGUIFormUsageTest {
 
         WebDriver driver;
 
-        // this does actually work on HtmlUnitDriver
-        driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-        ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+        driver = getDefaultDriver();
 
+        // this does actually work on HtmlUnitDriver
+        //driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
+        //((HtmlUnitDriver)driver).setJavascriptEnabled(true);
         //driver = new SafariDriver();
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
 
         driver.get("http://swapi.co/api/people/1/?format=api");
 
@@ -82,10 +102,11 @@ public class SwapiGUIFormUsageTest {
 
         WebDriver driver;
 
-        // this does actually work on HtmlUnitDriver
-        driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-        ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+        driver = getDefaultDriver();
 
+        // this does actually work on HtmlUnitDriver
+        //driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
+        //((HtmlUnitDriver)driver).setJavascriptEnabled(true);
         //driver = new SafariDriver();
 
         driver.get("http://swapi.co/api/people/2/?format=api");
@@ -108,12 +129,13 @@ public class SwapiGUIFormUsageTest {
 
         // this doesn't actually work on HtmlUnitDriver since the JavaScript is not interpreted properly
         WebDriver driver;
+        driver = getDefaultDriver();
 
-        driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-        ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+        //driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
+        //((HtmlUnitDriver)driver).setJavascriptEnabled(true);
 
         //driver = new SafariDriver();
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
 
         driver.get("https://swapi.co/");
 
@@ -157,10 +179,10 @@ public class SwapiGUIFormUsageTest {
 
         // this doesn't actually work on HtmlUnitDriver since the JavaScript is not interpreted properly
         WebDriver driver;
+        driver = getDefaultDriver();
 
-        driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-        ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
-
+        //driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
+        //((HtmlUnitDriver)driver).setJavascriptEnabled(true);
         //driver = new SafariDriver();
         //driver = new ChromeDriver();
 
