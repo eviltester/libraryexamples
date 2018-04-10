@@ -86,8 +86,8 @@
         
     </dependencies>
 
-    <!-- This basically says the source requires at least Java 1.7
-and use a compiler that outputs Java 1.7 -->
+    <!-- This basically says the source requires at least Java 1.8
+and use a compiler that outputs Java 1.8 -->
     <build>
         <plugins>
             <plugin>
@@ -95,8 +95,8 @@ and use a compiler that outputs Java 1.7 -->
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
