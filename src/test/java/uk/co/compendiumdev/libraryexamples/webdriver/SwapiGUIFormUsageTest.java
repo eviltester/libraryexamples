@@ -39,12 +39,12 @@ public class SwapiGUIFormUsageTest {
 
         // comment out the lines you want to get the driver you need
 
-        driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
-        ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+        //driver = new HtmlUnitDriver(BrowserVersion.BEST_SUPPORTED, true);
+        //((HtmlUnitDriver)driver).setJavascriptEnabled(true);
 
         //driver = new ChromeDriver();
 
-        //driver = new SafariDriver();
+        driver = new SafariDriver();
 
         return driver;
     }

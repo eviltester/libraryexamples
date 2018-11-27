@@ -10,24 +10,29 @@
 
     <dependencies>
 
-        <!-- webdriver -->
+        <!-- webdriver
+            https://www.seleniumhq.org/download/maven.jsp
+         -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.4.0</version>
+            <version>3.141.59</version>
         </dependency>
 
+        <!--
+            https://github.com/SeleniumHQ/htmlunit-driver
+        -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>htmlunit-driver</artifactId>
-            <version>2.26</version>
+            <version>2.33.3</version>
         </dependency>
 
         <!-- rest assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>3.0.7</version>
+            <version>3.2.0</version>
         </dependency>
 
         <!-- JSOUP -->
@@ -35,11 +40,13 @@
             <!-- jsoup HTML parser library @ http://jsoup.org/ -->
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.10.2</version>
+            <version>1.11.2</version>
         </dependency>
 
 
-        <!-- Hamcrest -->
+        <!-- Hamcrest
+            http://hamcrest.org/JavaHamcrest/javadoc/
+        -->
         <!-- RestAssured includes Hamcrest core and library  , this just adds everything from Hamcrest  -->
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -48,12 +55,14 @@
         </dependency>
 
 
-        <!-- GSon JSON Parsing -->
+        <!-- GSon JSON Parsing
+            https://github.com/google/gson
+        -->
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.0</version>
+            <version>2.8.5</version>
         </dependency>
 
 
@@ -66,17 +75,18 @@
         -->
 
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.2.5</version>
+            <version>4.2.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>1.2.5</version>
+            <version>4.2.0</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
