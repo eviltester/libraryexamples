@@ -52,7 +52,8 @@ public class DownloadAFileExampleTest {
 
         // if your url was extracted from a json respose in another message then you might need to decode it first
         // to make sure it is a completely valid URL e.g. doesn't have any \u0026 type values
-        String urlToDownload="https://raw.githubusercontent.com/eviltester/libraryexamples/master/src/test/java/uk/co/compendiumdev/libraryexamples/restassured/SwapiAPIUsageTest.java";
+        String urlToDownload="https://avatars3.githubusercontent.com/u/2621217?s=40&v=4";
+        //String urlToDownload="https://raw.githubusercontent.com/eviltester/libraryexamples/master/src/test/java/uk/co/compendiumdev/libraryexamples/restassured/SwapiAPIUsageTest.java";
         urlToDownload = UrlDecoder.urlDecode(urlToDownload, Charset.defaultCharset(), false);
 
 
@@ -63,7 +64,7 @@ public class DownloadAFileExampleTest {
         //String downloadFileName = "downloadedFile_" + UUID.randomUUID() + "_.txt";
 
         // the point is, control the filename so you know what you are downloading
-        String downloadFileName = "downloadedFile.txt";
+        String downloadFileName = "downloadedFile.png";
 
 
         // For the purpose of the test, if the file already exists then I will delete it
