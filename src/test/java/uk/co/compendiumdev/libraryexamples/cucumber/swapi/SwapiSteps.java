@@ -26,7 +26,7 @@ public class SwapiSteps {
     public void aCallToTheApiIsMade(String apiendpoint) throws Throwable {
         this.endpoint = apiendpoint;
         response = RestAssured.get(
-                "http://swapi.co/api/" + apiendpoint + "/" + this.userId + "/?format=json").
+                "https://swapi.dev/api/" + apiendpoint + "/" + this.userId + "/?format=json").
                 andReturn();
     }
 
@@ -43,7 +43,7 @@ public class SwapiSteps {
     @Given("^Users exist with the following \\\"([^\\\"]*)\\\" and \\\"([^\\\"]*)\\\"$")
     public void users_exist_with_the_following(String anid, String name) throws Throwable {
         RestAssured.get(
-                "http://swapi.co/api/people/" + anid + "/?format=json").
+                "https://swapi.dev/api/people/" + anid + "/?format=json").
                 then().
                 assertThat().
                 body("name", equalTo(name));

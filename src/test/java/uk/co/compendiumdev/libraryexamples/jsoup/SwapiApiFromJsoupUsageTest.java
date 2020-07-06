@@ -14,7 +14,7 @@ public class SwapiApiFromJsoupUsageTest {
     public void canGetLuke() throws IOException {
 
         // have to ignore content type or it throws exception if not text/*, application/xml, or application/xhtml+xml
-        Document doc = Jsoup.connect("http://swapi.co/api/people/1/?format=json").ignoreContentType(true).get();
+        Document doc = Jsoup.connect("https://swapi.dev/api/people/1/?format=json").ignoreContentType(true).get();
 
         String json = doc.text();
         System.out.println(json);
@@ -27,7 +27,7 @@ public class SwapiApiFromJsoupUsageTest {
     @Test
     public void canGetC3PO() throws IOException {
 
-        Document doc = Jsoup.connect("http://swapi.co/api/people/2/?format=json").ignoreContentType(true).get();
+        Document doc = Jsoup.connect("https://swapi.dev/api/people/2/?format=json").ignoreContentType(true).get();
 
         String json = doc.text();
         System.out.println(json);
@@ -40,7 +40,7 @@ public class SwapiApiFromJsoupUsageTest {
     /* JSOUP API Exercises
 
          - make sure your URL call is always upto date by getting the url from the root api
-             - make a call to http://swapi.co/api/?format=json and use the url for people in the returned array
+             - make a call to https://swapi.dev/api/?format=json and use the url for people in the returned array
 
          - automate more of the Swapi API e.g. planets etc.
 

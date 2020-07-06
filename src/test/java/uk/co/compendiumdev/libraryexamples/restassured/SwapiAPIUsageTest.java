@@ -29,7 +29,7 @@ public class SwapiAPIUsageTest {
     @Test
     public void canGetLuke(){
 
-        RestAssured.get("http://swapi.co/api/people/1/?format=json").
+        RestAssured.get("https://swapi.dev/api/people/1/?format=json").
                 then().
                 assertThat().
                 body("name",
@@ -44,7 +44,7 @@ public class SwapiAPIUsageTest {
 
         // use RestAssured to make an HTML Call
         Response response = RestAssured.get(
-                          "http://swapi.co/api/people/2/?format=json").
+                          "https://swapi.dev/api/people/2/?format=json").
                            andReturn();
 
         String json = response.getBody().asString();
@@ -86,7 +86,7 @@ public class SwapiAPIUsageTest {
 
         // use RestAssured to make an HTML Call
         Response response = RestAssured.get(
-                "http://swapi.co/api/people/2/?format=json").
+                "https://swapi.dev/api/people/2/?format=json").
                 andReturn();
 
         String json = response.getBody().asString();
@@ -106,7 +106,7 @@ public class SwapiAPIUsageTest {
     /* Exercises:
 
         You can easily view the JSON used by visiting the Swapi.co site
-            http://swapi.co/api/people/2/?format=api
+            https://swapi.dev/api/people/2/?format=api
 
         - automate more of the Swapi API e.g. planets etc.
 

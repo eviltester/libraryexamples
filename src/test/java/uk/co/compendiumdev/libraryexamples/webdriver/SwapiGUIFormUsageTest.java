@@ -84,7 +84,7 @@ public class SwapiGUIFormUsageTest {
         //driver = new SafariDriver();
         //driver = new ChromeDriver();
 
-        driver.get("http://swapi.co/api/people/1/?format=api");
+        driver.get("https://swapi.dev/api/people/1/?format=api");
 
         WebElement response = driver.findElement(By.cssSelector("div.response-info > pre"));
 
@@ -109,7 +109,7 @@ public class SwapiGUIFormUsageTest {
         //((HtmlUnitDriver)driver).setJavascriptEnabled(true);
         //driver = new SafariDriver();
 
-        driver.get("http://swapi.co/api/people/2/?format=api");
+        driver.get("https://swapi.dev/api/people/2/?format=api");
 
         WebElement response = driver.findElement(By.cssSelector("div.response-info > pre"));
 
